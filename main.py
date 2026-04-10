@@ -1,5 +1,6 @@
 import pandas as pd
 from src.data_cleaning import clean_data
+from src.visualization import plot_data
 
 df = pd.read_csv('data/student_data.csv');
 df = clean_data(df)
@@ -11,3 +12,4 @@ print("\nCleaned Data:\n", df.head())
 # print("\n Summary: \n", df.describe())
 # print("\n Missing values: \n",df.isnull().sum())
 # print(df.corr())
+plot_data(df)
